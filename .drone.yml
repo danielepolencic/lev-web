@@ -2,7 +2,7 @@ pipeline:
 
   build:
     privileged: true
-    image: dflemstr/drone-dind
+    image: docker:1.11
     commands:
       - docker build -t lev-web-test .
     when:
