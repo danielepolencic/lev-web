@@ -7,3 +7,8 @@ pipeline:
       - docker build -t lev-web-test .
     when:
       event: [pull_request, push, tag]
+
+services:
+  dind:
+    image: docker:1.11-dind
+    privileged: true
