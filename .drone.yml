@@ -1,0 +1,9 @@
+pipeline:
+
+  build:
+    privileged: true
+    image: dflemstr/drone-dind
+    commands:
+      - docker build -t lev-web-test .
+    when:
+      event: [pull_request, push, tag]
